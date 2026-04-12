@@ -1,6 +1,6 @@
 "use client"
+
 import project from "@/assets/project.png";
-import amazon from "@/assets/amazon.jpg";
 import invoice from "@/assets/invoice.png";
 import grc from "@/assets/grc.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,6 +14,43 @@ import gsap from "gsap";
 export default function Project() {
 
   const sectionRef = useRef(null);
+
+  const items: {
+    title: string;
+    img: StaticImageData | string;
+    text: string;
+    github: string;
+    live: string;
+  }[] = [
+    {
+      title: "Website Builder",
+      img: "/website-builder.jpg",
+      text: "This is my biggest project. A fully responsive full-stack website builder built with Next.js and TypeScript. It allows anyone to create their own restaurant business website without any coding knowledge. Simply drag and drop elements, customize layouts, add your own metadata, designs, buttons, text, themes, navbar, footer, and much more.",
+      github: "https://github.com/sheikhmanik/website-builder",
+      live: "https://fuvii.com/website-builder/demo/",
+    },
+    {
+      title: "RenewHQ",
+      img: "/renewhq.png",
+      text: "This product helps gyms, coaches, and subscription businesses track members, manage expiries, and recover lost revenue - all in one simple dashboard.",
+      github: "https://github.com/sheikhmanik/RenewHQ",
+      live: "https://renewhq.vercel.app",
+    },
+    {
+      title: "Invoicing Software",
+      img: invoice,
+      text: "A clean, robust invoice creation application built with Tailwind, NextJS, ExpressJS, Fastify, NodeJS, Prisma, PostgresSQL, Supabase, TypeScript. It allows users to create, manage, and export professional invoices with dynamic data handling and a user-friendly interface.",
+      github: "https://github.com/sheikhmanik/invoicing-software",
+      live: "https://invoicing-lac.vercel.app",
+    },
+    {
+      title: "GRC Compliance Platform",
+      img: grc,
+      text: "An enterprise-style GRC platform for managing assets, risks, compliance frameworks, and role-based permissions with audit logging.",
+      github: "https://github.com/sheikhmanik/VizGRC",
+      live: "https://vizgrc.vercel.app",
+    },
+  ];
 
   useEffect(() => {
     // Register plugin (very important)
@@ -35,43 +72,6 @@ export default function Project() {
       }
     );
   }, []);
-
-  const items: {
-    title: string;
-    img: StaticImageData | string;
-    text: string;
-    github: string;
-    live: string;
-  }[] = [
-    {
-      title: "Website Builder",
-      img: "/website-builder.jpg",
-      text: "This is my biggest project. A fully responsive full-stack website builder built with Next.js and TypeScript. It allows anyone to create their own restaurant business website without any coding knowledge. Simply drag and drop elements, customize layouts, add your own metadata, designs, buttons, text, themes, navbar, footer, and much more.",
-      github: "https://github.com/sheikhmanik/website-builder",
-      live: "https://fuvii.com/website-builder/demo/",
-    },
-    {
-      title: "Invoicing Software",
-      img: invoice,
-      text: "A clean, robust invoice creation application built with Tailwind, NextJS, ExpressJS, Fastify, NodeJS, Prisma, PostgresSQL, Supabase, TypeScript. It allows users to create, manage, and export professional invoices with dynamic data handling and a user-friendly interface.",
-      github: "https://github.com/sheikhmanik/invoicing-software",
-      live: "https://invoicing-flax.vercel.app",
-    },
-    {
-      title: "GRC Compliance Platform",
-      img: grc,
-      text: "An enterprise-style GRC platform for managing assets, risks, compliance frameworks, and role-based permissions with audit logging.",
-      github: "https://github.com/sheikhmanik/VizGRC",
-      live: "https://vizgrc-backend.onrender.com",
-    },
-    {
-      title: "Amazon Clone",
-      img: amazon,
-      text: "A responsive Amazon clone with authentication, product listing, cart features. Built using ReactJS, TailwindCSS, NodeJS, Express, MySQL, and JavaScript.",
-      github: "https://github.com/sheikhmanik/amazon",
-      live: "https://teal-heliotrope-50b11d.netlify.app",
-    },
-  ];
 
   return (
     <div ref={sectionRef} className="pt-10 scroll-mt-10 sm:scroll-mt-15" id="project">
