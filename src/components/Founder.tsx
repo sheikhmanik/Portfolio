@@ -40,9 +40,8 @@ export default function Founder() {
           <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent">
             Founder
           </h2>
-
+          <span className="w-1 h-1 rounded-full bg-gray-500"></span>
           <p className="text-gray-400 mt-3 text-sm md:text-base">
-            The mind behind{" "}
             <Link
               href="https://renewhq.vercel.app"
               target="_blank"
@@ -55,7 +54,7 @@ export default function Founder() {
         </div>
 
         {/* Card */}
-        <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 shadow-xl">
+        <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 shadow-xl hover:scale-105 transition-transform duration-500">
 
           <div className="flex flex-col md:flex-row items-center gap-8">
 
