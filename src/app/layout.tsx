@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist } from 'next/font/google';
 import "./globals.css";
-// import CustomCursor from "@/components/CustomCursor";
 import AnimatedBackground from "@/ui/AnimatedBackground";
 
 const urbanist = Urbanist({
@@ -61,7 +60,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={urbanist.className}>
       <body>
-        {/* <CustomCursor/> */}
         <AnimatedBackground/>
         {children}
       </body>
