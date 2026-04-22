@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="flex flex-col items-center justify-center mt-5 md:mt-10 gap-5">
         <div className="h-28 w-28 md:h-40 md:w-40 relative">
           <Image
-            src="/me.jpg"
+            src="/dp.png"
             alt="Manik’s Profile"
             draggable="false"
             fill
