@@ -1,4 +1,5 @@
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
 import Founder from "@/components/Founder";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -13,6 +14,7 @@ export default function Home() {
       <div className="container mx-auto pt-[88px] md:pt-28 px-3 md:px-5 space-y-10">
         <Hero/>
         <Founder/>
+        <Experience/>
         <Services/>
         <Toolbox/>
         <Project/>

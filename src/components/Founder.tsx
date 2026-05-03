@@ -89,14 +89,14 @@ export default function Founder() {
                 </p>
 
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  I built RenewHQ after noticing a real-world problem. Gyms,
-                  academies, and subscription-based businesses struggle to track
-                  memberships and renewals efficiently. Most still rely on manual
-                  notebooks or scattered systems.
+                  I identified a real gap — gyms, coaches, and subscription-based
+                  businesses have no simple way to track memberships and recover lost
+                  revenue. Most still rely on notebooks or scattered spreadsheets.
                   <br /><br />
-                  RenewHQ simplifies everything. From tracking members to
-                  automating renewals - helping businesses stay organized,
-                  reduce churn, and grow with confidence.
+                  So I built RenewHQ from scratch, solo — handling everything from
+                  product design and DB schema to frontend and deployment. Onboarded
+                  the first members within weeks of launch and currently iterating
+                  based on real user feedback.
                 </p>
 
               </div>
