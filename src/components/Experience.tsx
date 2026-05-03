@@ -31,6 +31,17 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
+    company: "RenewHQ",
+    companyUrl: "https://renewhq.vercel.app",
+    role: "Founder & Full Stack Developer",
+    type: "Self-founded",
+    period: "Apr 2026 - Present",
+    location: "Remote",
+    description:
+      "Identified a real gap — gyms, coaches, and subscription-based businesses have no simple way to track memberships and recover lost revenue. Built RenewHQ from scratch, solo — handling everything from product design and DB schema to frontend and deployment. Onboarded the first ~10 members within weeks of launch and currently iterating based on real user feedback.",
+    techStack: "TypeScript, NextJS, ReactJS, PostgreSQL, Prisma, TailwindCSS, Git.",
+  },
+  {
     company: "Possier",
     companyUrl: "https://possier.com",
     role: "Full Stack Software Developer",
@@ -107,7 +118,7 @@ export default function WorkExperience() {
           delay: i * 0.15,
           scrollTrigger: {
             trigger: el,
-            start: "top 85%",
+            start: "top 95%",
             toggleActions: "play none none none",
           },
         }
@@ -120,10 +131,7 @@ export default function WorkExperience() {
       {/* Section Header */}
       <div className="container mx-auto flex flex-col items-center justify-center gap-3 mb-10 text-center px-4">
         <p className="font-playfair font-extrabold text-3xl md:text-5xl leading-tight bg-[length:300%_300%] animate-gradient-x text-transparent bg-clip-text bg-gradient-to-r to-red-500 via-slate-500 from-slate-400">
-          Where I've Worked
-        </p>
-        <p className="font-lato font-medium text-base md:text-lg bg-[length:300%_300%] animate-gradient-x text-transparent bg-clip-text bg-gradient-to-r to-red-500 via-slate-500 from-slate-400 max-w-xl">
-          A timeline of roles where I've shipped real products, grown fast, and written code that matters.
+          Where I've Worked & Building Now
         </p>
       </div>
 
@@ -141,10 +149,20 @@ export default function WorkExperience() {
                 className="relative pl-14"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-[9px] top-[18px] w-5 h-5 rounded-full border-2 border-red-500 bg-gray-950 shadow-[0_0_8px_rgba(239,68,68,0.5)]" />
+                <div className={`absolute left-[9px] top-[18px] w-5 h-5 rounded-full border-2 bg-gray-950 shadow-[0_0_8px_rgba(239,68,68,0.5)] ${
+                  index === 0
+                    ? "border-green-400 shadow-[0_0_10px_rgba(74,222,128,0.6)] animate-pulse"
+                    : "border-red-500"
+                }`} />
 
                 {/* Card */}
                 <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-5 shadow-md hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+
+                  {index === 0 && (
+                    <span className="text-xs font-lato font-semibold text-green-400 bg-green-400/10 border border-green-400/30 px-2 py-0.5 rounded-full">
+                      ● Active
+                    </span>
+                  )}
 
                   {/* Top row: company + date */}
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-1">
